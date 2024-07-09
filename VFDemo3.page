@@ -1,0 +1,23 @@
+<!--This is a standard page for Account record, By entering details into each field and by clicking on save button you can create new Account record of Account object-->
+
+<apex:page standardController="Account">
+    <apex:form>
+
+        <apex:pageBlock title="Account Information">
+
+            <apex:pageBlockSection columns="1">
+                <apex:inputField value="{!Account.Name}"/>
+                <apex:inputField value="{!Account.Phone}"/>
+                <apex:inputField value="{!Account.Rating}"/>
+                <apex:inputField value="{!Account.AccountNumber}"/>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockButtons>
+                <apex:commandButton value="Save" action="{!save}"/>
+                <apex:commandButton value="Cancel" action="{!cancel}"/>
+            </apex:pageBlockButtons>
+
+        </apex:pageBlock>
+
+    </apex:form>
+</apex:page>
