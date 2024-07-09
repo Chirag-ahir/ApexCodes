@@ -1,0 +1,43 @@
+<!--This example will demonstrate how we can create table for Account object with the help of "standardController" tag of Apex and we can modify account fields of real account-->
+
+<apex:page showHeader="false" standardController="Account">
+    <apex:form >
+        
+        <!--Creating table in VF Page-->
+        <table border="1">
+            <tr>
+                <td>Account Name</td>
+                <td>
+                    <apex:inputField value="{!Account.Name}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Account Number</td>
+                <td>
+                    <apex:inputField value="{!Account.AccountNumber}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Annual Revenue</td>
+                <td>
+                    <apex:inputField value="{!Account.AnnualRevenue}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Rating</td>
+                <td>
+                    <apex:inputField value="{!Account.Rating}"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <apex:commandButton value="Save" action="{!save}"/>
+                </td>
+                <td>
+                    <apex:commandButton value="Cancel" action="{!cancel}"/>
+                </td>
+            </tr>
+        </table>
+        
+    </apex:form>
+</apex:page>

@@ -1,0 +1,26 @@
+<!--Basic visual force page video: https://www.youtube.com/live/9CdGc5ewogs?si=kCFT4BaQ4lfkNN-0-->
+
+<apex:page >
+    <apex:pageBlock title="First Page Block">
+        
+    	<apex:pageBlockSection title="User Information Section">
+            <!--Way to define Global variable-->
+            Name of the logged in user is: {! $User.FirstName & ' - ' & $User.LastName }
+            
+            <!--Paragraph tag in VF Page-->
+            <p> Today's date is {! TODAY() } </p>
+            <p> Current Fiscal Year is {! Year(TODAY()) } </p>
+        </apex:pageBlockSection>
+        
+        <!--Conditions in  VF Page-->
+       	<apex:pageBlockSection title="IF Else Condition">
+            <!--This line will check wheather Salesforce.com contains force.com or not-->
+            {! IF (CONTAINS('Salesforce.com','force.com'),'True','False')} 
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection title="First Page Block Section">
+        	Hello World in First Section!
+        </apex:pageBlockSection>
+
+    </apex:pageBlock>
+</apex:page>
